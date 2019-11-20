@@ -1,0 +1,24 @@
+---
+router1:
+   host: 192.168.1.156
+   interface_0_0: 10.0.0.1
+   interface_0_1: 10.0.0.9
+   groups:
+        - cisco_ios
+router2:
+   host: 192.168.1.154
+   interface_0_0: 10.0.0.2
+   interface_0_1: 10.0.0.5
+   groups:
+        - cisco_ios
+router3:
+   host: 192.168.1.155
+   interface_0_0: 10.0.0.10
+   interface_0_1: 10.0.0.6
+   groups:
+        - cisco_ios
+   
+
+  
+
+

@@ -1,0 +1,6 @@
+---
+2 num_workers: 100
+3 inventory: nornir.plugins.inventory.simple.SimpleInventory
+4 SimpleInventory:
+5     host_file: "mrosi@MBP-di-Mario-2:~/Documents/GitHub/Python_LAB/Nornir_Python/hosts.yaml"
+6     group_file: "mrosi@MBP-di-Mario-2:~/Documents/GitHub/Python_LAB/Nornir_Python/groups.yaml"

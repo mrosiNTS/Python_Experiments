@@ -1,0 +1,8 @@
+---
+defaults: {}
+
+cisco_ios:
+  nornir_username: cisco
+  nornir_password: cisco
+  nornir_ssh_port: 22
+  nornir_nos: cisco_ios
