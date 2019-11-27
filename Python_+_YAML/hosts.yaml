@@ -1,0 +1,5 @@
+---
+Router1:
+  groups:
+  - cisco_ios
+  hostname: 172.25.81.203

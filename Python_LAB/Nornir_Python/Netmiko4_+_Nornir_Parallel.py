@@ -4,7 +4,7 @@ from __future__ import print_function, unicode_literals
 from netmiko import ConnectHandler
 from datetime import datetime
 import time
-from nornir.core import InitNornir
+from nornir import InitNornir
 from nornir.plugins.tasks.networking import netmiko_send_command
 from nornir.plugins.tasks.networking import netmiko_send_config
 

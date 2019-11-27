@@ -1,0 +1,171 @@
+2019-11-25 17:23:21,704 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['facts', 'interfaces']} on 4 hosts
+2019-11-25 17:23:27,619 - nornir.core.task -    ERROR -      start() - Host 'Router4': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/nornir/plugins/tasks/networking/napalm_get.py", line 49, in napalm_get
+    device = task.host.get_connection("napalm", task.nornir.config)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/nornir/core/inventory.py", line 302, in get_connection
+    extras=conn.extras,
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/nornir/core/inventory.py", line 352, in open_connection
+    configuration=configuration,
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/nornir/plugins/connections/napalm.py", line 51, in open
+    connection.open()
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/napalm/ios/ios.py", line 169, in open
+    device_type, netmiko_optional_args=self.netmiko_optional_args
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/napalm/base/base.py", line 102, in _netmiko_open
+    self._netmiko_device.enable()
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/netmiko/cisco_base_connection.py", line 22, in enable
+    cmd=cmd, pattern=pattern, re_flags=re_flags
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/netmiko/base_connection.py", line 1470, in enable
+    raise ValueError(msg)
+ValueError: Failed to enter enable mode. Please ensure you pass the 'secret' argument to ConnectHandler.
+
+2019-11-25 17:23:27,620 - nornir.core.task -    ERROR -      start() - Host 'Router2': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/nornir/plugins/tasks/networking/napalm_get.py", line 49, in napalm_get
+    device = task.host.get_connection("napalm", task.nornir.config)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/nornir/core/inventory.py", line 302, in get_connection
+    extras=conn.extras,
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/nornir/core/inventory.py", line 352, in open_connection
+    configuration=configuration,
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/nornir/plugins/connections/napalm.py", line 51, in open
+    connection.open()
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/napalm/ios/ios.py", line 169, in open
+    device_type, netmiko_optional_args=self.netmiko_optional_args
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/napalm/base/base.py", line 102, in _netmiko_open
+    self._netmiko_device.enable()
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/netmiko/cisco_base_connection.py", line 22, in enable
+    cmd=cmd, pattern=pattern, re_flags=re_flags
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/netmiko/base_connection.py", line 1470, in enable
+    raise ValueError(msg)
+ValueError: Failed to enter enable mode. Please ensure you pass the 'secret' argument to ConnectHandler.
+
+2019-11-25 17:23:28,151 - nornir.core.task -    ERROR -      start() - Host 'Router1': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/nornir/plugins/tasks/networking/napalm_get.py", line 49, in napalm_get
+    device = task.host.get_connection("napalm", task.nornir.config)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/nornir/core/inventory.py", line 302, in get_connection
+    extras=conn.extras,
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/nornir/core/inventory.py", line 352, in open_connection
+    configuration=configuration,
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/nornir/plugins/connections/napalm.py", line 51, in open
+    connection.open()
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/napalm/ios/ios.py", line 169, in open
+    device_type, netmiko_optional_args=self.netmiko_optional_args
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/napalm/base/base.py", line 102, in _netmiko_open
+    self._netmiko_device.enable()
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/netmiko/cisco_base_connection.py", line 22, in enable
+    cmd=cmd, pattern=pattern, re_flags=re_flags
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/netmiko/base_connection.py", line 1470, in enable
+    raise ValueError(msg)
+ValueError: Failed to enter enable mode. Please ensure you pass the 'secret' argument to ConnectHandler.
+
+2019-11-25 17:23:28,468 - nornir.core.task -    ERROR -      start() - Host 'Router3': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/nornir/plugins/tasks/networking/napalm_get.py", line 49, in napalm_get
+    device = task.host.get_connection("napalm", task.nornir.config)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/nornir/core/inventory.py", line 302, in get_connection
+    extras=conn.extras,
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/nornir/core/inventory.py", line 352, in open_connection
+    configuration=configuration,
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/nornir/plugins/connections/napalm.py", line 51, in open
+    connection.open()
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/napalm/ios/ios.py", line 169, in open
+    device_type, netmiko_optional_args=self.netmiko_optional_args
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/napalm/base/base.py", line 102, in _netmiko_open
+    self._netmiko_device.enable()
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/netmiko/cisco_base_connection.py", line 22, in enable
+    cmd=cmd, pattern=pattern, re_flags=re_flags
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/netmiko/base_connection.py", line 1470, in enable
+    raise ValueError(msg)
+ValueError: Failed to enter enable mode. Please ensure you pass the 'secret' argument to ConnectHandler.
+
+2019-11-26 18:01:18,843 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show ip int b'} on 4 hosts
+2019-11-26 18:01:25,210 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show ip int b'} on 4 hosts
+2019-11-26 18:01:28,124 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show ip int b'} on 4 hosts
+2019-11-26 18:01:31,025 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show ip int b'} on 4 hosts
+2019-11-26 18:01:53,504 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show ip int b'} on 4 hosts
+2019-11-26 18:02:02,217 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show ip int b'} on 4 hosts
+2019-11-26 18:02:05,108 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show ip int b'} on 4 hosts
+2019-11-26 18:02:08,011 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show ip int b'} on 4 hosts
+2019-11-26 18:05:55,422 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show ip int b'} on 4 hosts
+2019-11-26 18:06:05,669 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show ip int b'} on 4 hosts
+2019-11-26 18:06:08,578 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show ip int b'} on 4 hosts
+2019-11-26 18:06:11,482 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show ip int b'} on 4 hosts
+2019-11-26 18:06:44,072 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show ip int b'} on 4 hosts
+2019-11-26 18:07:00,190 - nornir.core.task -    ERROR -      start() - Host 'Router3': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/nornir/plugins/tasks/networking/netmiko_send_command.py", line 26, in netmiko_send_command
+    net_connect = task.host.get_connection("netmiko", task.nornir.config)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/nornir/core/inventory.py", line 302, in get_connection
+    extras=conn.extras,
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/nornir/core/inventory.py", line 352, in open_connection
+    configuration=configuration,
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/nornir/plugins/connections/netmiko.py", line 58, in open
+    self.connection = ConnectHandler(**parameters)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/netmiko/ssh_dispatcher.py", line 246, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/netmiko/base_connection.py", line 317, in __init__
+    self._open()
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/netmiko/base_connection.py", line 323, in _open
+    self._try_session_preparation()
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/netmiko/base_connection.py", line 738, in _try_session_preparation
+    self.session_preparation()
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/netmiko/cisco/cisco_ios.py", line 18, in session_preparation
+    self.set_base_prompt()
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/netmiko/base_connection.py", line 1066, in set_base_prompt
+    prompt = self.find_prompt(delay_factor=delay_factor)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/netmiko/base_connection.py", line 1107, in find_prompt
+    raise ValueError("Unable to find prompt: {}".format(prompt))
+ValueError: Unable to find prompt: 
+
+2019-11-26 18:07:00,227 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show ip int b'} on 4 hosts
+2019-11-26 18:07:00,859 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show ip int b'} on 4 hosts
+2019-11-26 18:07:03,765 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show ip int b'} on 4 hosts
+2019-11-26 18:07:37,755 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show ip int b'} on 4 hosts
+2019-11-26 18:07:44,702 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show ip int b'} on 4 hosts
+2019-11-26 18:07:47,595 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show ip int b'} on 4 hosts
+2019-11-26 18:07:50,287 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show ip int b'} on 4 hosts
+2019-11-26 18:08:09,724 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show ip int b'} on 4 hosts
+2019-11-26 18:08:15,866 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show ip int b'} on 4 hosts
+2019-11-26 18:08:18,544 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show ip int b'} on 4 hosts
+2019-11-26 18:08:21,445 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show ip int b'} on 4 hosts
+2019-11-26 22:37:14,659 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show ip int b'} on 4 hosts
+2019-11-26 22:38:13,451 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show ip int b'} on 4 hosts
+2019-11-26 22:41:46,713 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show ip int b'} on 4 hosts
+2019-11-26 22:43:57,990 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show ip int b'} on 4 hosts
+2019-11-26 22:46:02,160 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show ip int b'} on 4 hosts
+2019-11-26 22:46:30,592 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show ip int b'} on 4 hosts
+2019-11-26 22:47:08,614 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show ip int b'} on 4 hosts
+2019-11-26 22:47:32,346 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show ip int b'} on 4 hosts
+2019-11-26 22:48:36,128 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show ip int b'} on 4 hosts
+2019-11-26 22:49:08,631 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show ip int b'} on 4 hosts
+2019-11-26 22:50:09,862 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show ip int b'} on 4 hosts
+2019-11-26 22:51:36,572 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show ip int b'} on 4 hosts
+2019-11-26 22:52:48,487 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show ip int b'} on 4 hosts
+2019-11-26 22:53:18,993 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show ip int b'} on 4 hosts
+2019-11-26 22:58:21,425 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show ip int b'} on 4 hosts
+2019-11-27 00:09:12,356 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show ip int b'} on 4 hosts
+2019-11-27 00:09:27,900 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show ip int b'} on 4 hosts
+2019-11-27 00:10:34,322 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show ip int b'} on 4 hosts
+2019-11-27 10:53:27,792 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show ip int b'} on 4 hosts
+2019-11-27 10:53:50,049 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show ip int b'} on 4 hosts
+2019-11-27 10:55:20,457 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show ip int b'} on 4 hosts
+2019-11-27 10:55:53,717 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show ip int b'} on 4 hosts
+2019-11-27 10:56:20,364 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show ip int b'} on 4 hosts
+2019-11-27 10:56:33,532 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show ip int b'} on 4 hosts
+2019-11-27 10:59:37,441 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show ip int b'} on 4 hosts
+2019-11-27 11:16:51,902 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show ip int b'} on 4 hosts
+2019-11-27 11:17:08,227 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show ip int b'} on 4 hosts
+2019-11-27 11:17:45,672 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show ip int b'} on 4 hosts
+2019-11-27 11:18:39,347 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show ip int b'} on 4 hosts
+2019-11-27 14:19:29,064 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show ip int b'} on 1 hosts
