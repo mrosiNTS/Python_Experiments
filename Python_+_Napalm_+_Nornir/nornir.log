@@ -1,0 +1,1071 @@
+2019-11-27 15:00:03,021 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show lldp neighbors'} on 4 hosts
+2019-11-27 15:00:29,501 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show lldp neighbors'} on 4 hosts
+2019-11-27 15:04:23,830 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show lldp neighbors'} on 4 hosts
+2019-11-27 15:37:25,356 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['lldp_neighbors']} on 4 hosts
+2019-11-27 15:37:30,982 - nornir.core.task -    ERROR -      start() - Host 'Router4': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/nornir/plugins/tasks/networking/napalm_get.py", line 49, in napalm_get
+    device = task.host.get_connection("napalm", task.nornir.config)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/nornir/core/inventory.py", line 302, in get_connection
+    extras=conn.extras,
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/nornir/core/inventory.py", line 352, in open_connection
+    configuration=configuration,
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/nornir/plugins/connections/napalm.py", line 51, in open
+    connection.open()
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/napalm/ios/ios.py", line 169, in open
+    device_type, netmiko_optional_args=self.netmiko_optional_args
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/napalm/base/base.py", line 102, in _netmiko_open
+    self._netmiko_device.enable()
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/netmiko/cisco_base_connection.py", line 22, in enable
+    cmd=cmd, pattern=pattern, re_flags=re_flags
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/netmiko/base_connection.py", line 1470, in enable
+    raise ValueError(msg)
+ValueError: Failed to enter enable mode. Please ensure you pass the 'secret' argument to ConnectHandler.
+
+2019-11-27 15:37:30,984 - nornir.core.task -    ERROR -      start() - Host 'Router1': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/nornir/plugins/tasks/networking/napalm_get.py", line 49, in napalm_get
+    device = task.host.get_connection("napalm", task.nornir.config)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/nornir/core/inventory.py", line 302, in get_connection
+    extras=conn.extras,
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/nornir/core/inventory.py", line 352, in open_connection
+    configuration=configuration,
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/nornir/plugins/connections/napalm.py", line 51, in open
+    connection.open()
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/napalm/ios/ios.py", line 169, in open
+    device_type, netmiko_optional_args=self.netmiko_optional_args
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/napalm/base/base.py", line 102, in _netmiko_open
+    self._netmiko_device.enable()
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/netmiko/cisco_base_connection.py", line 22, in enable
+    cmd=cmd, pattern=pattern, re_flags=re_flags
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/netmiko/base_connection.py", line 1470, in enable
+    raise ValueError(msg)
+ValueError: Failed to enter enable mode. Please ensure you pass the 'secret' argument to ConnectHandler.
+
+2019-11-27 15:37:31,283 - nornir.core.task -    ERROR -      start() - Host 'Router2': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/nornir/plugins/tasks/networking/napalm_get.py", line 49, in napalm_get
+    device = task.host.get_connection("napalm", task.nornir.config)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/nornir/core/inventory.py", line 302, in get_connection
+    extras=conn.extras,
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/nornir/core/inventory.py", line 352, in open_connection
+    configuration=configuration,
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/nornir/plugins/connections/napalm.py", line 51, in open
+    connection.open()
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/napalm/ios/ios.py", line 169, in open
+    device_type, netmiko_optional_args=self.netmiko_optional_args
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/napalm/base/base.py", line 102, in _netmiko_open
+    self._netmiko_device.enable()
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/netmiko/cisco_base_connection.py", line 22, in enable
+    cmd=cmd, pattern=pattern, re_flags=re_flags
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/netmiko/base_connection.py", line 1470, in enable
+    raise ValueError(msg)
+ValueError: Failed to enter enable mode. Please ensure you pass the 'secret' argument to ConnectHandler.
+
+2019-11-27 15:37:31,287 - nornir.core.task -    ERROR -      start() - Host 'Router3': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/nornir/plugins/tasks/networking/napalm_get.py", line 49, in napalm_get
+    device = task.host.get_connection("napalm", task.nornir.config)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/nornir/core/inventory.py", line 302, in get_connection
+    extras=conn.extras,
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/nornir/core/inventory.py", line 352, in open_connection
+    configuration=configuration,
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/nornir/plugins/connections/napalm.py", line 51, in open
+    connection.open()
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/napalm/ios/ios.py", line 169, in open
+    device_type, netmiko_optional_args=self.netmiko_optional_args
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/napalm/base/base.py", line 102, in _netmiko_open
+    self._netmiko_device.enable()
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/netmiko/cisco_base_connection.py", line 22, in enable
+    cmd=cmd, pattern=pattern, re_flags=re_flags
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/netmiko/base_connection.py", line 1470, in enable
+    raise ValueError(msg)
+ValueError: Failed to enter enable mode. Please ensure you pass the 'secret' argument to ConnectHandler.
+
+2019-11-27 15:44:48,453 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['lldp_neighbors']} on 4 hosts
+2019-11-27 15:44:48,464 - nornir.core.task -    ERROR -      start() - Host 'Router4': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/nornir/plugins/tasks/networking/napalm_get.py", line 49, in napalm_get
+    device = task.host.get_connection("napalm", task.nornir.config)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/nornir/core/inventory.py", line 302, in get_connection
+    extras=conn.extras,
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/nornir/core/inventory.py", line 352, in open_connection
+    configuration=configuration,
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/nornir/plugins/connections/napalm.py", line 49, in open
+    network_driver = get_network_driver(platform)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/napalm/base/__init__.py", line 74, in get_network_driver
+    raise ModuleImportError("Please provide a valid driver name.")
+napalm.base.exceptions.ModuleImportError: Please provide a valid driver name.
+
+2019-11-27 15:44:48,464 - nornir.core.task -    ERROR -      start() - Host 'Router2': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/nornir/plugins/tasks/networking/napalm_get.py", line 49, in napalm_get
+    device = task.host.get_connection("napalm", task.nornir.config)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/nornir/core/inventory.py", line 302, in get_connection
+    extras=conn.extras,
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/nornir/core/inventory.py", line 352, in open_connection
+    configuration=configuration,
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/nornir/plugins/connections/napalm.py", line 49, in open
+    network_driver = get_network_driver(platform)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/napalm/base/__init__.py", line 74, in get_network_driver
+    raise ModuleImportError("Please provide a valid driver name.")
+napalm.base.exceptions.ModuleImportError: Please provide a valid driver name.
+
+2019-11-27 15:44:48,464 - nornir.core.task -    ERROR -      start() - Host 'Router1': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/nornir/plugins/tasks/networking/napalm_get.py", line 49, in napalm_get
+    device = task.host.get_connection("napalm", task.nornir.config)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/nornir/core/inventory.py", line 302, in get_connection
+    extras=conn.extras,
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/nornir/core/inventory.py", line 352, in open_connection
+    configuration=configuration,
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/nornir/plugins/connections/napalm.py", line 49, in open
+    network_driver = get_network_driver(platform)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/napalm/base/__init__.py", line 74, in get_network_driver
+    raise ModuleImportError("Please provide a valid driver name.")
+napalm.base.exceptions.ModuleImportError: Please provide a valid driver name.
+
+2019-11-27 15:44:48,464 - nornir.core.task -    ERROR -      start() - Host 'Router3': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/nornir/plugins/tasks/networking/napalm_get.py", line 49, in napalm_get
+    device = task.host.get_connection("napalm", task.nornir.config)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/nornir/core/inventory.py", line 302, in get_connection
+    extras=conn.extras,
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/nornir/core/inventory.py", line 352, in open_connection
+    configuration=configuration,
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/nornir/plugins/connections/napalm.py", line 49, in open
+    network_driver = get_network_driver(platform)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/napalm/base/__init__.py", line 74, in get_network_driver
+    raise ModuleImportError("Please provide a valid driver name.")
+napalm.base.exceptions.ModuleImportError: Please provide a valid driver name.
+
+2019-11-27 15:53:58,696 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['lldp_neighbors']} on 4 hosts
+2019-11-27 15:55:38,935 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['lldp_neighbors']} on 1 hosts
+2019-11-27 15:56:21,442 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['lldp_neighbors']} on 1 hosts
+2019-11-27 16:11:53,614 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['config']} on 1 hosts
+2019-11-27 16:12:54,326 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['config']} on 1 hosts
+2019-11-27 16:14:44,520 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['config']} on 4 hosts
+2019-11-27 16:14:50,318 - nornir.core.task -    ERROR -      start() - Host 'Router2': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/nornir/plugins/tasks/networking/napalm_get.py", line 49, in napalm_get
+    device = task.host.get_connection("napalm", task.nornir.config)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/nornir/core/inventory.py", line 302, in get_connection
+    extras=conn.extras,
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/nornir/core/inventory.py", line 352, in open_connection
+    configuration=configuration,
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/nornir/plugins/connections/napalm.py", line 51, in open
+    connection.open()
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/napalm/ios/ios.py", line 169, in open
+    device_type, netmiko_optional_args=self.netmiko_optional_args
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/napalm/base/base.py", line 102, in _netmiko_open
+    self._netmiko_device.enable()
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/netmiko/cisco_base_connection.py", line 22, in enable
+    cmd=cmd, pattern=pattern, re_flags=re_flags
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/netmiko/base_connection.py", line 1470, in enable
+    raise ValueError(msg)
+ValueError: Failed to enter enable mode. Please ensure you pass the 'secret' argument to ConnectHandler.
+
+2019-11-27 16:14:50,319 - nornir.core.task -    ERROR -      start() - Host 'Router1': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/nornir/plugins/tasks/networking/napalm_get.py", line 49, in napalm_get
+    device = task.host.get_connection("napalm", task.nornir.config)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/nornir/core/inventory.py", line 302, in get_connection
+    extras=conn.extras,
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/nornir/core/inventory.py", line 352, in open_connection
+    configuration=configuration,
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/nornir/plugins/connections/napalm.py", line 51, in open
+    connection.open()
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/napalm/ios/ios.py", line 169, in open
+    device_type, netmiko_optional_args=self.netmiko_optional_args
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/napalm/base/base.py", line 102, in _netmiko_open
+    self._netmiko_device.enable()
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/netmiko/cisco_base_connection.py", line 22, in enable
+    cmd=cmd, pattern=pattern, re_flags=re_flags
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/netmiko/base_connection.py", line 1470, in enable
+    raise ValueError(msg)
+ValueError: Failed to enter enable mode. Please ensure you pass the 'secret' argument to ConnectHandler.
+
+2019-11-27 16:14:50,319 - nornir.core.task -    ERROR -      start() - Host 'Router4': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/nornir/plugins/tasks/networking/napalm_get.py", line 49, in napalm_get
+    device = task.host.get_connection("napalm", task.nornir.config)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/nornir/core/inventory.py", line 302, in get_connection
+    extras=conn.extras,
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/nornir/core/inventory.py", line 352, in open_connection
+    configuration=configuration,
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/nornir/plugins/connections/napalm.py", line 51, in open
+    connection.open()
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/napalm/ios/ios.py", line 169, in open
+    device_type, netmiko_optional_args=self.netmiko_optional_args
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/napalm/base/base.py", line 102, in _netmiko_open
+    self._netmiko_device.enable()
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/netmiko/cisco_base_connection.py", line 22, in enable
+    cmd=cmd, pattern=pattern, re_flags=re_flags
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/netmiko/base_connection.py", line 1470, in enable
+    raise ValueError(msg)
+ValueError: Failed to enter enable mode. Please ensure you pass the 'secret' argument to ConnectHandler.
+
+2019-11-27 16:14:50,319 - nornir.core.task -    ERROR -      start() - Host 'Router3': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/nornir/plugins/tasks/networking/napalm_get.py", line 49, in napalm_get
+    device = task.host.get_connection("napalm", task.nornir.config)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/nornir/core/inventory.py", line 302, in get_connection
+    extras=conn.extras,
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/nornir/core/inventory.py", line 352, in open_connection
+    configuration=configuration,
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/nornir/plugins/connections/napalm.py", line 51, in open
+    connection.open()
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/napalm/ios/ios.py", line 169, in open
+    device_type, netmiko_optional_args=self.netmiko_optional_args
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/napalm/base/base.py", line 102, in _netmiko_open
+    self._netmiko_device.enable()
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/netmiko/cisco_base_connection.py", line 22, in enable
+    cmd=cmd, pattern=pattern, re_flags=re_flags
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/netmiko/base_connection.py", line 1470, in enable
+    raise ValueError(msg)
+ValueError: Failed to enter enable mode. Please ensure you pass the 'secret' argument to ConnectHandler.
+
+2019-11-27 16:19:55,043 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['config']} on 1 hosts
+2019-11-27 16:20:15,597 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['config']} on 1 hosts
+2019-11-27 16:20:24,990 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['lldp_neighbors']} on 1 hosts
+2019-11-27 16:26:10,587 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['config']} on 1 hosts
+2019-11-27 16:26:22,141 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['lldp_neighbors']} on 1 hosts
+2019-11-27 16:26:46,438 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['config']} on 1 hosts
+2019-11-27 16:26:58,382 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['lldp_neighbors']} on 1 hosts
+2019-11-27 16:29:14,372 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['config']} on 1 hosts
+2019-11-27 16:29:25,744 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['lldp_neighbors']} on 1 hosts
+2019-11-27 16:30:42,110 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['config']} on 1 hosts
+2019-11-27 16:30:53,383 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['lldp_neighbors']} on 1 hosts
+2019-11-27 16:31:26,126 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['config']} on 1 hosts
+2019-11-27 16:31:38,179 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['lldp_neighbors']} on 1 hosts
+2019-11-27 16:32:54,093 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['config']} on 1 hosts
+2019-11-27 16:34:23,363 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['config']} on 1 hosts
+2019-11-27 16:34:37,380 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['lldp_neighbors']} on 1 hosts
+2019-11-27 16:43:28,249 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['config']} on 1 hosts
+2019-11-27 16:43:37,605 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['lldp_neighbors']} on 1 hosts
+2019-11-27 16:44:37,247 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['config']} on 1 hosts
+2019-11-27 16:45:49,801 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['config']} on 1 hosts
+2019-11-27 16:46:16,501 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['config']} on 1 hosts
+2019-11-27 16:46:40,723 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['config']} on 1 hosts
+2019-11-27 16:47:08,312 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['config']} on 1 hosts
+2019-11-27 16:48:32,479 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['config']} on 1 hosts
+2019-11-27 16:50:02,822 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['config']} on 1 hosts
+2019-11-27 16:51:05,509 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['config']} on 1 hosts
+2019-11-27 16:52:56,732 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['config']} on 1 hosts
+2019-11-27 16:54:14,779 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['config']} on 1 hosts
+2019-11-27 16:54:55,371 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['config']} on 1 hosts
+2019-11-27 16:55:44,578 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['config']} on 1 hosts
+2019-11-27 16:57:09,148 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['config']} on 1 hosts
+2019-11-27 16:57:18,848 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['lldp_neighbors']} on 1 hosts
+2019-11-27 16:57:51,228 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['config']} on 1 hosts
+2019-11-27 17:13:18,122 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['config']} on 1 hosts
+2019-11-27 17:13:54,260 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['config']} on 1 hosts
+2019-11-27 17:14:03,358 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['lldp_neighbors']} on 1 hosts
+2019-11-28 13:34:33,613 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['config']} on 4 hosts
+2019-11-28 13:37:41,570 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['config']} on 4 hosts
+2019-11-28 13:39:42,991 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['config']} on 4 hosts
+2019-11-28 13:49:10,151 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['config']} on 4 hosts
+2019-11-28 15:54:55,721 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['config']} on 4 hosts
+2019-11-28 16:02:43,340 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['config']} on 4 hosts
+2019-11-28 16:02:55,472 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['lldp_neighbors']} on 4 hosts
+2019-11-28 16:03:15,799 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['config']} on 4 hosts
+2019-11-28 16:03:31,407 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['lldp_neighbors']} on 4 hosts
+2019-11-28 19:15:43,864 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['lldp_neighbors']} on 4 hosts
+2019-11-28 19:19:03,995 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['config']} on 4 hosts
+2019-11-28 19:44:18,754 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['lldp_neighbors']} on 4 hosts
+2019-11-28 19:44:18,771 - nornir.core.task -    ERROR -      start() - Host 'Router3': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/napalm/ios/ios.py", line 204, in _send_command
+    output = self.device.send_command(command)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/netmiko/base_connection.py", line 1286, in send_command
+    prompt = self.find_prompt(delay_factor=delay_factor)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/netmiko/base_connection.py", line 1081, in find_prompt
+    self.write_channel(self.RETURN)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/netmiko/base_connection.py", line 422, in write_channel
+    self._write_channel(out_data)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/netmiko/base_connection.py", line 384, in _write_channel
+    self.remote_conn.sendall(write_bytes(out_data, encoding=self.encoding))
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/paramiko/channel.py", line 846, in sendall
+    sent = self.send(s)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/paramiko/channel.py", line 801, in send
+    return self._send(s, m)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/paramiko/channel.py", line 1198, in _send
+    raise socket.error("Socket is closed")
+OSError: Socket is closed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/nornir/plugins/tasks/networking/napalm_get.py", line 61, in napalm_get
+    result[g] = method(**options)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/napalm/ios/ios.py", line 842, in get_lldp_neighbors
+    neighbors_detail = self.get_lldp_neighbors_detail()
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/napalm/ios/ios.py", line 864, in get_lldp_neighbors_detail
+    lldp_entries = self._send_command(command)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/napalm/ios/ios.py", line 207, in _send_command
+    raise ConnectionClosedException(str(e))
+napalm.base.exceptions.ConnectionClosedException: Socket is closed
+
+2019-11-28 19:44:18,771 - nornir.core.task -    ERROR -      start() - Host 'Router1': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/napalm/ios/ios.py", line 204, in _send_command
+    output = self.device.send_command(command)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/netmiko/base_connection.py", line 1286, in send_command
+    prompt = self.find_prompt(delay_factor=delay_factor)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/netmiko/base_connection.py", line 1081, in find_prompt
+    self.write_channel(self.RETURN)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/netmiko/base_connection.py", line 422, in write_channel
+    self._write_channel(out_data)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/netmiko/base_connection.py", line 384, in _write_channel
+    self.remote_conn.sendall(write_bytes(out_data, encoding=self.encoding))
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/paramiko/channel.py", line 846, in sendall
+    sent = self.send(s)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/paramiko/channel.py", line 801, in send
+    return self._send(s, m)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/paramiko/channel.py", line 1198, in _send
+    raise socket.error("Socket is closed")
+OSError: Socket is closed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/nornir/plugins/tasks/networking/napalm_get.py", line 61, in napalm_get
+    result[g] = method(**options)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/napalm/ios/ios.py", line 842, in get_lldp_neighbors
+    neighbors_detail = self.get_lldp_neighbors_detail()
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/napalm/ios/ios.py", line 864, in get_lldp_neighbors_detail
+    lldp_entries = self._send_command(command)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/napalm/ios/ios.py", line 207, in _send_command
+    raise ConnectionClosedException(str(e))
+napalm.base.exceptions.ConnectionClosedException: Socket is closed
+
+2019-11-28 19:44:18,771 - nornir.core.task -    ERROR -      start() - Host 'Router4': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/napalm/ios/ios.py", line 204, in _send_command
+    output = self.device.send_command(command)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/netmiko/base_connection.py", line 1286, in send_command
+    prompt = self.find_prompt(delay_factor=delay_factor)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/netmiko/base_connection.py", line 1081, in find_prompt
+    self.write_channel(self.RETURN)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/netmiko/base_connection.py", line 422, in write_channel
+    self._write_channel(out_data)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/netmiko/base_connection.py", line 384, in _write_channel
+    self.remote_conn.sendall(write_bytes(out_data, encoding=self.encoding))
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/paramiko/channel.py", line 846, in sendall
+    sent = self.send(s)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/paramiko/channel.py", line 801, in send
+    return self._send(s, m)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/paramiko/channel.py", line 1198, in _send
+    raise socket.error("Socket is closed")
+OSError: Socket is closed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/nornir/plugins/tasks/networking/napalm_get.py", line 61, in napalm_get
+    result[g] = method(**options)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/napalm/ios/ios.py", line 842, in get_lldp_neighbors
+    neighbors_detail = self.get_lldp_neighbors_detail()
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/napalm/ios/ios.py", line 864, in get_lldp_neighbors_detail
+    lldp_entries = self._send_command(command)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/napalm/ios/ios.py", line 207, in _send_command
+    raise ConnectionClosedException(str(e))
+napalm.base.exceptions.ConnectionClosedException: Socket is closed
+
+2019-11-28 19:44:18,772 - nornir.core.task -    ERROR -      start() - Host 'Router2': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/napalm/ios/ios.py", line 204, in _send_command
+    output = self.device.send_command(command)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/netmiko/base_connection.py", line 1286, in send_command
+    prompt = self.find_prompt(delay_factor=delay_factor)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/netmiko/base_connection.py", line 1081, in find_prompt
+    self.write_channel(self.RETURN)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/netmiko/base_connection.py", line 422, in write_channel
+    self._write_channel(out_data)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/netmiko/base_connection.py", line 384, in _write_channel
+    self.remote_conn.sendall(write_bytes(out_data, encoding=self.encoding))
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/paramiko/channel.py", line 846, in sendall
+    sent = self.send(s)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/paramiko/channel.py", line 801, in send
+    return self._send(s, m)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/paramiko/channel.py", line 1198, in _send
+    raise socket.error("Socket is closed")
+OSError: Socket is closed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/nornir/plugins/tasks/networking/napalm_get.py", line 61, in napalm_get
+    result[g] = method(**options)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/napalm/ios/ios.py", line 842, in get_lldp_neighbors
+    neighbors_detail = self.get_lldp_neighbors_detail()
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/napalm/ios/ios.py", line 864, in get_lldp_neighbors_detail
+    lldp_entries = self._send_command(command)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/napalm/ios/ios.py", line 207, in _send_command
+    raise ConnectionClosedException(str(e))
+napalm.base.exceptions.ConnectionClosedException: Socket is closed
+
+2019-11-28 19:49:43,495 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['lldp_neighbors']} on 4 hosts
+2019-11-28 19:50:07,627 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['lldp_neighbors']} on 4 hosts
+2019-11-28 19:50:28,278 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['lldp_neighbors']} on 4 hosts
+2019-11-28 20:02:26,391 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['lldp_neighbors']} on 4 hosts
+2019-11-28 20:02:26,401 - nornir.core.task -    ERROR -      start() - Host 'Router1': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/napalm/ios/ios.py", line 204, in _send_command
+    output = self.device.send_command(command)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/netmiko/base_connection.py", line 1286, in send_command
+    prompt = self.find_prompt(delay_factor=delay_factor)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/netmiko/base_connection.py", line 1081, in find_prompt
+    self.write_channel(self.RETURN)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/netmiko/base_connection.py", line 422, in write_channel
+    self._write_channel(out_data)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/netmiko/base_connection.py", line 384, in _write_channel
+    self.remote_conn.sendall(write_bytes(out_data, encoding=self.encoding))
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/paramiko/channel.py", line 846, in sendall
+    sent = self.send(s)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/paramiko/channel.py", line 801, in send
+    return self._send(s, m)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/paramiko/channel.py", line 1198, in _send
+    raise socket.error("Socket is closed")
+OSError: Socket is closed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/nornir/plugins/tasks/networking/napalm_get.py", line 61, in napalm_get
+    result[g] = method(**options)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/napalm/ios/ios.py", line 842, in get_lldp_neighbors
+    neighbors_detail = self.get_lldp_neighbors_detail()
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/napalm/ios/ios.py", line 864, in get_lldp_neighbors_detail
+    lldp_entries = self._send_command(command)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/napalm/ios/ios.py", line 207, in _send_command
+    raise ConnectionClosedException(str(e))
+napalm.base.exceptions.ConnectionClosedException: Socket is closed
+
+2019-11-28 20:02:26,401 - nornir.core.task -    ERROR -      start() - Host 'Router4': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/napalm/ios/ios.py", line 204, in _send_command
+    output = self.device.send_command(command)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/netmiko/base_connection.py", line 1286, in send_command
+    prompt = self.find_prompt(delay_factor=delay_factor)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/netmiko/base_connection.py", line 1081, in find_prompt
+    self.write_channel(self.RETURN)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/netmiko/base_connection.py", line 422, in write_channel
+    self._write_channel(out_data)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/netmiko/base_connection.py", line 384, in _write_channel
+    self.remote_conn.sendall(write_bytes(out_data, encoding=self.encoding))
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/paramiko/channel.py", line 846, in sendall
+    sent = self.send(s)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/paramiko/channel.py", line 801, in send
+    return self._send(s, m)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/paramiko/channel.py", line 1198, in _send
+    raise socket.error("Socket is closed")
+OSError: Socket is closed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/nornir/plugins/tasks/networking/napalm_get.py", line 61, in napalm_get
+    result[g] = method(**options)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/napalm/ios/ios.py", line 842, in get_lldp_neighbors
+    neighbors_detail = self.get_lldp_neighbors_detail()
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/napalm/ios/ios.py", line 864, in get_lldp_neighbors_detail
+    lldp_entries = self._send_command(command)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/napalm/ios/ios.py", line 207, in _send_command
+    raise ConnectionClosedException(str(e))
+napalm.base.exceptions.ConnectionClosedException: Socket is closed
+
+2019-11-28 20:02:26,401 - nornir.core.task -    ERROR -      start() - Host 'Router2': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/napalm/ios/ios.py", line 204, in _send_command
+    output = self.device.send_command(command)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/netmiko/base_connection.py", line 1286, in send_command
+    prompt = self.find_prompt(delay_factor=delay_factor)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/netmiko/base_connection.py", line 1081, in find_prompt
+    self.write_channel(self.RETURN)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/netmiko/base_connection.py", line 422, in write_channel
+    self._write_channel(out_data)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/netmiko/base_connection.py", line 384, in _write_channel
+    self.remote_conn.sendall(write_bytes(out_data, encoding=self.encoding))
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/paramiko/channel.py", line 846, in sendall
+    sent = self.send(s)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/paramiko/channel.py", line 801, in send
+    return self._send(s, m)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/paramiko/channel.py", line 1198, in _send
+    raise socket.error("Socket is closed")
+OSError: Socket is closed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/nornir/plugins/tasks/networking/napalm_get.py", line 61, in napalm_get
+    result[g] = method(**options)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/napalm/ios/ios.py", line 842, in get_lldp_neighbors
+    neighbors_detail = self.get_lldp_neighbors_detail()
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/napalm/ios/ios.py", line 864, in get_lldp_neighbors_detail
+    lldp_entries = self._send_command(command)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/napalm/ios/ios.py", line 207, in _send_command
+    raise ConnectionClosedException(str(e))
+napalm.base.exceptions.ConnectionClosedException: Socket is closed
+
+2019-11-28 20:02:26,401 - nornir.core.task -    ERROR -      start() - Host 'Router3': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/napalm/ios/ios.py", line 204, in _send_command
+    output = self.device.send_command(command)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/netmiko/base_connection.py", line 1286, in send_command
+    prompt = self.find_prompt(delay_factor=delay_factor)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/netmiko/base_connection.py", line 1081, in find_prompt
+    self.write_channel(self.RETURN)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/netmiko/base_connection.py", line 422, in write_channel
+    self._write_channel(out_data)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/netmiko/base_connection.py", line 384, in _write_channel
+    self.remote_conn.sendall(write_bytes(out_data, encoding=self.encoding))
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/paramiko/channel.py", line 846, in sendall
+    sent = self.send(s)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/paramiko/channel.py", line 801, in send
+    return self._send(s, m)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/paramiko/channel.py", line 1198, in _send
+    raise socket.error("Socket is closed")
+OSError: Socket is closed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/nornir/plugins/tasks/networking/napalm_get.py", line 61, in napalm_get
+    result[g] = method(**options)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/napalm/ios/ios.py", line 842, in get_lldp_neighbors
+    neighbors_detail = self.get_lldp_neighbors_detail()
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/napalm/ios/ios.py", line 864, in get_lldp_neighbors_detail
+    lldp_entries = self._send_command(command)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/napalm/ios/ios.py", line 207, in _send_command
+    raise ConnectionClosedException(str(e))
+napalm.base.exceptions.ConnectionClosedException: Socket is closed
+
+2019-11-28 20:04:24,947 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['lldp_neighbors']} on 4 hosts
+2019-11-28 20:04:37,252 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['lldp_neighbors']} on 4 hosts
+2019-11-29 11:49:25,579 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['config']} on 4 hosts
+2019-11-29 11:49:36,055 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['lldp_neighbors']} on 4 hosts
+2019-11-29 11:54:08,327 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['lldp_neighbors']} on 4 hosts
+2019-11-29 11:58:51,611 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['lldp_neighbors']} on 4 hosts
+2019-11-29 12:36:52,587 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['config']} on 4 hosts
+2019-11-29 12:37:02,689 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['lldp_neighbors']} on 4 hosts
+2019-11-29 12:37:19,190 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['config']} on 4 hosts
+2019-11-29 12:37:28,894 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['lldp_neighbors']} on 4 hosts
+2019-11-29 12:39:50,097 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['config']} on 4 hosts
+2019-11-29 12:39:59,766 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['lldp_neighbors']} on 4 hosts
+2019-11-29 12:40:15,242 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['config']} on 4 hosts
+2019-11-29 12:40:24,843 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['lldp_neighbors']} on 4 hosts
+2019-11-29 12:40:48,388 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['config']} on 4 hosts
+2019-11-29 12:40:58,206 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['lldp_neighbors']} on 4 hosts
+2019-11-29 12:48:08,533 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['config']} on 4 hosts
+2019-11-29 12:48:20,873 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['lldp_neighbors']} on 4 hosts
+2019-11-29 12:48:40,045 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['config']} on 4 hosts
+2019-11-29 12:48:52,434 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['lldp_neighbors']} on 4 hosts
+2019-11-29 12:53:04,914 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['config']} on 4 hosts
+2019-11-29 12:53:15,810 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['lldp_neighbors']} on 4 hosts
+2019-11-29 13:23:58,547 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['config']} on 4 hosts
+2019-11-29 13:24:08,474 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['lldp_neighbors']} on 4 hosts
+2019-11-29 13:39:55,585 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['config']} on 4 hosts
+2019-11-29 13:40:05,208 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['lldp_neighbors']} on 4 hosts
+2019-11-29 13:44:10,549 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['config']} on 4 hosts
+2019-11-29 13:44:20,232 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['lldp_neighbors']} on 4 hosts
+2019-11-29 13:45:04,788 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['config']} on 4 hosts
+2019-11-29 13:45:14,448 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['lldp_neighbors']} on 4 hosts
+2019-11-29 13:45:41,745 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['config']} on 4 hosts
+2019-11-29 13:45:51,441 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['lldp_neighbors']} on 4 hosts
+2019-11-29 13:48:43,938 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['config']} on 4 hosts
+2019-11-29 13:48:53,796 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['lldp_neighbors']} on 4 hosts
+2019-11-29 14:09:33,085 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['config']} on 4 hosts
+2019-11-29 14:09:42,883 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['lldp_neighbors']} on 4 hosts
+2019-11-29 14:10:47,000 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['config']} on 4 hosts
+2019-11-29 14:10:56,838 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['lldp_neighbors']} on 4 hosts
+2019-11-29 14:12:47,677 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['config']} on 4 hosts
+2019-11-29 14:12:57,394 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['lldp_neighbors']} on 4 hosts
+2019-11-29 14:13:30,221 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['config']} on 4 hosts
+2019-11-29 14:13:39,821 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['lldp_neighbors']} on 4 hosts
+2019-11-29 14:17:21,817 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['config']} on 4 hosts
+2019-11-29 14:17:37,912 - nornir.core.task -    ERROR -      start() - Host 'Router1': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/nornir/plugins/tasks/networking/napalm_get.py", line 49, in napalm_get
+    device = task.host.get_connection("napalm", task.nornir.config)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/nornir/core/inventory.py", line 302, in get_connection
+    extras=conn.extras,
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/nornir/core/inventory.py", line 352, in open_connection
+    configuration=configuration,
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/nornir/plugins/connections/napalm.py", line 51, in open
+    connection.open()
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/napalm/ios/ios.py", line 169, in open
+    device_type, netmiko_optional_args=self.netmiko_optional_args
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/napalm/base/base.py", line 96, in _netmiko_open
+    **netmiko_optional_args
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/netmiko/ssh_dispatcher.py", line 246, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/netmiko/base_connection.py", line 317, in __init__
+    self._open()
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/netmiko/base_connection.py", line 323, in _open
+    self._try_session_preparation()
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/netmiko/base_connection.py", line 738, in _try_session_preparation
+    self.session_preparation()
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/netmiko/cisco/cisco_ios.py", line 18, in session_preparation
+    self.set_base_prompt()
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/netmiko/base_connection.py", line 1066, in set_base_prompt
+    prompt = self.find_prompt(delay_factor=delay_factor)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/netmiko/base_connection.py", line 1107, in find_prompt
+    raise ValueError("Unable to find prompt: {}".format(prompt))
+ValueError: Unable to find prompt: 
+
+2019-11-29 15:12:38,502 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['config']} on 4 hosts
+2019-11-29 15:12:48,231 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['lldp_neighbors']} on 4 hosts
+2019-11-29 15:13:34,994 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['config']} on 4 hosts
+2019-11-29 15:13:49,869 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['lldp_neighbors']} on 4 hosts
+2019-11-29 15:27:33,997 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['config']} on 4 hosts
+2019-11-29 15:27:43,701 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['config']} on 4 hosts
+2019-11-29 15:27:55,710 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['lldp_neighbors']} on 4 hosts
+2019-11-29 15:29:07,876 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['config']} on 4 hosts
+2019-11-29 15:29:20,506 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['lldp_neighbors']} on 4 hosts
+2019-11-29 15:33:21,712 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['config']} on 4 hosts
+2019-11-29 15:33:31,295 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['lldp_neighbors']} on 4 hosts
+2019-11-29 15:34:53,142 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['config']} on 4 hosts
+2019-11-29 15:35:02,796 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['lldp_neighbors']} on 4 hosts
+2019-11-29 15:35:41,729 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['config']} on 4 hosts
+2019-11-29 15:35:51,360 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['lldp_neighbors']} on 4 hosts
+2019-11-30 00:37:28,320 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['config']} on 4 hosts
+2019-11-30 00:38:28,353 - nornir.core.task -    ERROR -      start() - Host 'Router3': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/netmiko/base_connection.py", line 884, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/paramiko/client.py", line 349, in connect
+    retry_on_signal(lambda: sock.connect(addr))
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/paramiko/util.py", line 280, in retry_on_signal
+    return function()
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/paramiko/client.py", line 349, in <lambda>
+    retry_on_signal(lambda: sock.connect(addr))
+socket.timeout: timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/napalm/base/base.py", line 96, in _netmiko_open
+    **netmiko_optional_args
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/netmiko/ssh_dispatcher.py", line 246, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/netmiko/base_connection.py", line 317, in __init__
+    self._open()
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/netmiko/base_connection.py", line 322, in _open
+    self.establish_connection()
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/netmiko/base_connection.py", line 890, in establish_connection
+    raise NetMikoTimeoutException(msg)
+netmiko.ssh_exception.NetMikoTimeoutException: Connection to device timed-out: cisco_ios 172.25.81.205:22
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/nornir/plugins/tasks/networking/napalm_get.py", line 49, in napalm_get
+    device = task.host.get_connection("napalm", task.nornir.config)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/nornir/core/inventory.py", line 302, in get_connection
+    extras=conn.extras,
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/nornir/core/inventory.py", line 352, in open_connection
+    configuration=configuration,
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/nornir/plugins/connections/napalm.py", line 51, in open
+    connection.open()
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/napalm/ios/ios.py", line 169, in open
+    device_type, netmiko_optional_args=self.netmiko_optional_args
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/napalm/base/base.py", line 99, in _netmiko_open
+    raise ConnectionException("Cannot connect to {}".format(self.hostname))
+napalm.base.exceptions.ConnectionException: Cannot connect to 172.25.81.205
+
+2019-11-30 00:38:28,354 - nornir.core.task -    ERROR -      start() - Host 'Router1': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/netmiko/base_connection.py", line 884, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/paramiko/client.py", line 349, in connect
+    retry_on_signal(lambda: sock.connect(addr))
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/paramiko/util.py", line 280, in retry_on_signal
+    return function()
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/paramiko/client.py", line 349, in <lambda>
+    retry_on_signal(lambda: sock.connect(addr))
+socket.timeout: timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/napalm/base/base.py", line 96, in _netmiko_open
+    **netmiko_optional_args
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/netmiko/ssh_dispatcher.py", line 246, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/netmiko/base_connection.py", line 317, in __init__
+    self._open()
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/netmiko/base_connection.py", line 322, in _open
+    self.establish_connection()
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/netmiko/base_connection.py", line 890, in establish_connection
+    raise NetMikoTimeoutException(msg)
+netmiko.ssh_exception.NetMikoTimeoutException: Connection to device timed-out: cisco_ios 172.25.81.210:22
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/nornir/plugins/tasks/networking/napalm_get.py", line 49, in napalm_get
+    device = task.host.get_connection("napalm", task.nornir.config)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/nornir/core/inventory.py", line 302, in get_connection
+    extras=conn.extras,
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/nornir/core/inventory.py", line 352, in open_connection
+    configuration=configuration,
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/nornir/plugins/connections/napalm.py", line 51, in open
+    connection.open()
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/napalm/ios/ios.py", line 169, in open
+    device_type, netmiko_optional_args=self.netmiko_optional_args
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/napalm/base/base.py", line 99, in _netmiko_open
+    raise ConnectionException("Cannot connect to {}".format(self.hostname))
+napalm.base.exceptions.ConnectionException: Cannot connect to 172.25.81.210
+
+2019-11-30 00:38:28,354 - nornir.core.task -    ERROR -      start() - Host 'Router4': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/netmiko/base_connection.py", line 884, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/paramiko/client.py", line 349, in connect
+    retry_on_signal(lambda: sock.connect(addr))
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/paramiko/util.py", line 280, in retry_on_signal
+    return function()
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/paramiko/client.py", line 349, in <lambda>
+    retry_on_signal(lambda: sock.connect(addr))
+socket.timeout: timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/napalm/base/base.py", line 96, in _netmiko_open
+    **netmiko_optional_args
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/netmiko/ssh_dispatcher.py", line 246, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/netmiko/base_connection.py", line 317, in __init__
+    self._open()
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/netmiko/base_connection.py", line 322, in _open
+    self.establish_connection()
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/netmiko/base_connection.py", line 890, in establish_connection
+    raise NetMikoTimeoutException(msg)
+netmiko.ssh_exception.NetMikoTimeoutException: Connection to device timed-out: cisco_ios 172.25.81.208:22
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/nornir/plugins/tasks/networking/napalm_get.py", line 49, in napalm_get
+    device = task.host.get_connection("napalm", task.nornir.config)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/nornir/core/inventory.py", line 302, in get_connection
+    extras=conn.extras,
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/nornir/core/inventory.py", line 352, in open_connection
+    configuration=configuration,
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/nornir/plugins/connections/napalm.py", line 51, in open
+    connection.open()
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/napalm/ios/ios.py", line 169, in open
+    device_type, netmiko_optional_args=self.netmiko_optional_args
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/napalm/base/base.py", line 99, in _netmiko_open
+    raise ConnectionException("Cannot connect to {}".format(self.hostname))
+napalm.base.exceptions.ConnectionException: Cannot connect to 172.25.81.208
+
+2019-11-30 00:38:28,354 - nornir.core.task -    ERROR -      start() - Host 'Router2': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/netmiko/base_connection.py", line 884, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/paramiko/client.py", line 349, in connect
+    retry_on_signal(lambda: sock.connect(addr))
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/paramiko/util.py", line 280, in retry_on_signal
+    return function()
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/paramiko/client.py", line 349, in <lambda>
+    retry_on_signal(lambda: sock.connect(addr))
+socket.timeout: timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/napalm/base/base.py", line 96, in _netmiko_open
+    **netmiko_optional_args
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/netmiko/ssh_dispatcher.py", line 246, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/netmiko/base_connection.py", line 317, in __init__
+    self._open()
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/netmiko/base_connection.py", line 322, in _open
+    self.establish_connection()
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/netmiko/base_connection.py", line 890, in establish_connection
+    raise NetMikoTimeoutException(msg)
+netmiko.ssh_exception.NetMikoTimeoutException: Connection to device timed-out: cisco_ios 172.25.81.203:22
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/nornir/plugins/tasks/networking/napalm_get.py", line 49, in napalm_get
+    device = task.host.get_connection("napalm", task.nornir.config)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/nornir/core/inventory.py", line 302, in get_connection
+    extras=conn.extras,
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/nornir/core/inventory.py", line 352, in open_connection
+    configuration=configuration,
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/nornir/plugins/connections/napalm.py", line 51, in open
+    connection.open()
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/napalm/ios/ios.py", line 169, in open
+    device_type, netmiko_optional_args=self.netmiko_optional_args
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/napalm/base/base.py", line 99, in _netmiko_open
+    raise ConnectionException("Cannot connect to {}".format(self.hostname))
+napalm.base.exceptions.ConnectionException: Cannot connect to 172.25.81.203
+
+2019-11-30 00:38:37,597 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['config']} on 4 hosts
+2019-11-30 00:38:47,443 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['lldp_neighbors']} on 4 hosts
+2019-11-30 00:44:46,681 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['config']} on 4 hosts
+2019-11-30 00:44:56,308 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['lldp_neighbors']} on 4 hosts
+2019-11-30 00:52:33,472 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['config']} on 4 hosts
+2019-11-30 00:52:43,212 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['lldp_neighbors']} on 4 hosts
+2019-11-30 09:21:23,741 -  nornir.core -     INFO -        run() - Running task 'load_json' with args {'file': './json_data'} on 4 hosts
+2019-11-30 09:21:23,759 - nornir.core.task -    ERROR -      start() - Host 'Router2': task 'load_json' failed with traceback:
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/nornir/plugins/tasks/data/load_json.py", line 28, in load_json
+    with open(file, "r") as f:
+FileNotFoundError: [Errno 2] No such file or directory: './json_data'
+
+2019-11-30 09:21:23,759 - nornir.core.task -    ERROR -      start() - Host 'Router1': task 'load_json' failed with traceback:
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/nornir/plugins/tasks/data/load_json.py", line 28, in load_json
+    with open(file, "r") as f:
+FileNotFoundError: [Errno 2] No such file or directory: './json_data'
+
+2019-11-30 09:21:23,759 - nornir.core.task -    ERROR -      start() - Host 'Router4': task 'load_json' failed with traceback:
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/nornir/plugins/tasks/data/load_json.py", line 28, in load_json
+    with open(file, "r") as f:
+FileNotFoundError: [Errno 2] No such file or directory: './json_data'
+
+2019-11-30 09:21:23,759 - nornir.core.task -    ERROR -      start() - Host 'Router3': task 'load_json' failed with traceback:
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/nornir/plugins/tasks/data/load_json.py", line 28, in load_json
+    with open(file, "r") as f:
+FileNotFoundError: [Errno 2] No such file or directory: './json_data'
+
+2019-11-30 09:21:56,008 -  nornir.core -     INFO -        run() - Running task 'load_json' with args {'file': './json_data'} on 4 hosts
+2019-11-30 09:22:24,720 -  nornir.core -     INFO -        run() - Running task 'load_json' with args {'file': './json_data'} on 4 hosts
+2019-11-30 09:22:41,066 -  nornir.core -     INFO -        run() - Running task 'load_json' with args {'file': './json_data'} on 4 hosts
+2019-11-30 09:23:08,220 -  nornir.core -     INFO -        run() - Running task 'load_json' with args {'file': './json_data.json'} on 4 hosts
+2019-11-30 09:23:40,123 -  nornir.core -     INFO -        run() - Running task 'load_json' with args {'file': './json_data.json'} on 4 hosts
+2019-11-30 09:25:09,849 -  nornir.core -     INFO -        run() - Running task 'load_json' with args {'file': 'json_data.json'} on 4 hosts
+2019-11-30 09:26:13,732 -  nornir.core -     INFO -        run() - Running task 'load_json' with args {'file': 'json_data.json'} on 4 hosts
+2019-12-02 13:37:28,777 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['interfaces']} on 4 hosts
+2019-12-02 13:38:28,814 - nornir.core.task -    ERROR -      start() - Host 'Router3': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/netmiko/base_connection.py", line 884, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/paramiko/client.py", line 349, in connect
+    retry_on_signal(lambda: sock.connect(addr))
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/paramiko/util.py", line 280, in retry_on_signal
+    return function()
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/paramiko/client.py", line 349, in <lambda>
+    retry_on_signal(lambda: sock.connect(addr))
+socket.timeout: timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/napalm/base/base.py", line 96, in _netmiko_open
+    **netmiko_optional_args
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/netmiko/ssh_dispatcher.py", line 246, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/netmiko/base_connection.py", line 317, in __init__
+    self._open()
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/netmiko/base_connection.py", line 322, in _open
+    self.establish_connection()
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/netmiko/base_connection.py", line 890, in establish_connection
+    raise NetMikoTimeoutException(msg)
+netmiko.ssh_exception.NetMikoTimeoutException: Connection to device timed-out: cisco_ios 172.25.81.206:22
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/nornir/plugins/tasks/networking/napalm_get.py", line 49, in napalm_get
+    device = task.host.get_connection("napalm", task.nornir.config)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/nornir/core/inventory.py", line 302, in get_connection
+    extras=conn.extras,
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/nornir/core/inventory.py", line 352, in open_connection
+    configuration=configuration,
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/nornir/plugins/connections/napalm.py", line 51, in open
+    connection.open()
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/napalm/ios/ios.py", line 169, in open
+    device_type, netmiko_optional_args=self.netmiko_optional_args
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/napalm/base/base.py", line 99, in _netmiko_open
+    raise ConnectionException("Cannot connect to {}".format(self.hostname))
+napalm.base.exceptions.ConnectionException: Cannot connect to 172.25.81.206
+
+2019-12-02 13:39:43,637 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['interfaces']} on 4 hosts
+2019-12-02 13:40:36,081 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['interfaces']} on 4 hosts
+2019-12-02 13:41:36,105 - nornir.core.task -    ERROR -      start() - Host 'Router3': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/netmiko/base_connection.py", line 884, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/paramiko/client.py", line 349, in connect
+    retry_on_signal(lambda: sock.connect(addr))
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/paramiko/util.py", line 280, in retry_on_signal
+    return function()
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/paramiko/client.py", line 349, in <lambda>
+    retry_on_signal(lambda: sock.connect(addr))
+socket.timeout: timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/napalm/base/base.py", line 96, in _netmiko_open
+    **netmiko_optional_args
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/netmiko/ssh_dispatcher.py", line 246, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/netmiko/base_connection.py", line 317, in __init__
+    self._open()
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/netmiko/base_connection.py", line 322, in _open
+    self.establish_connection()
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/netmiko/base_connection.py", line 890, in establish_connection
+    raise NetMikoTimeoutException(msg)
+netmiko.ssh_exception.NetMikoTimeoutException: Connection to device timed-out: cisco_ios 172.25.81.206:22
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/nornir/plugins/tasks/networking/napalm_get.py", line 49, in napalm_get
+    device = task.host.get_connection("napalm", task.nornir.config)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/nornir/core/inventory.py", line 302, in get_connection
+    extras=conn.extras,
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/nornir/core/inventory.py", line 352, in open_connection
+    configuration=configuration,
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/nornir/plugins/connections/napalm.py", line 51, in open
+    connection.open()
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/napalm/ios/ios.py", line 169, in open
+    device_type, netmiko_optional_args=self.netmiko_optional_args
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/napalm/base/base.py", line 99, in _netmiko_open
+    raise ConnectionException("Cannot connect to {}".format(self.hostname))
+napalm.base.exceptions.ConnectionException: Cannot connect to 172.25.81.206
+
+2019-12-02 13:41:59,199 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['interfaces']} on 4 hosts
+2019-12-02 13:42:03,540 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['interfaces']} on 4 hosts
+2019-12-02 13:42:43,495 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['interfaces']} on 4 hosts
+2019-12-02 13:43:14,411 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['interfaces']} on 4 hosts
+2019-12-02 13:43:40,430 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['interfaces']} on 4 hosts
+2019-12-02 13:44:24,648 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['interfaces']} on 4 hosts
+2019-12-02 15:52:26,255 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['interfaces']} on 4 hosts
+2019-12-02 15:53:30,650 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['interfaces']} on 4 hosts
+2019-12-02 16:04:20,082 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['interfaces']} on 4 hosts
+2019-12-02 16:05:19,255 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['interfaces']} on 4 hosts
+2019-12-02 16:06:27,960 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['interfaces']} on 4 hosts
+2019-12-02 16:13:16,189 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['interfaces']} on 4 hosts
+2019-12-02 16:14:43,065 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['interfaces']} on 4 hosts
+2019-12-02 16:16:44,148 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['interfaces']} on 4 hosts
+2019-12-02 16:17:11,032 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['interfaces']} on 4 hosts
+2019-12-02 16:18:26,987 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['interfaces']} on 4 hosts
+2019-12-02 16:18:55,918 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['interfaces']} on 4 hosts
+2019-12-02 16:22:07,400 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['interfaces']} on 4 hosts
+2019-12-02 16:26:02,210 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['interfaces']} on 4 hosts
+2019-12-02 16:27:48,502 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['interfaces']} on 4 hosts
+2019-12-02 16:28:17,374 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['interfaces']} on 4 hosts
+2019-12-02 16:45:37,533 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['interfaces']} on 4 hosts
+2019-12-02 16:46:06,286 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['interfaces']} on 4 hosts
+2019-12-02 16:46:57,779 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['interfaces']} on 4 hosts
+2019-12-02 16:48:09,189 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['interfaces']} on 4 hosts
+2019-12-02 16:48:38,277 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['interfaces']} on 4 hosts
+2019-12-02 16:54:59,625 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['interfaces']} on 4 hosts
+2019-12-02 16:55:25,668 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['interfaces']} on 4 hosts
+2019-12-02 16:57:23,314 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['interfaces']} on 4 hosts
+2019-12-02 17:49:43,199 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['interfaces']} on 4 hosts
+2019-12-02 17:50:55,231 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['interfaces']} on 4 hosts
+2019-12-02 17:51:26,497 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['interfaces']} on 4 hosts
+2019-12-02 17:51:41,315 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['interfaces']} on 4 hosts
+2019-12-02 17:53:46,515 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['interfaces']} on 4 hosts
+2019-12-02 17:55:10,245 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['interfaces']} on 4 hosts
+2019-12-02 17:55:42,968 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['interfaces']} on 4 hosts
+2019-12-02 17:56:05,291 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['interfaces']} on 4 hosts
+2019-12-02 18:13:15,131 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['interfaces']} on 4 hosts
+2019-12-02 18:13:46,578 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['interfaces']} on 4 hosts
+2019-12-02 18:14:31,039 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['interfaces']} on 4 hosts
+2019-12-02 18:17:01,071 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['interfaces']} on 4 hosts
+2019-12-02 18:18:02,665 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['interfaces']} on 4 hosts
+2019-12-02 18:18:35,645 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['interfaces']} on 4 hosts
+2019-12-02 18:19:37,144 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['interfaces']} on 4 hosts
+2019-12-02 18:21:20,800 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['interfaces']} on 4 hosts
+2019-12-02 18:21:47,252 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['interfaces']} on 4 hosts
+2019-12-02 18:22:49,889 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['interfaces']} on 4 hosts
+2019-12-02 18:25:29,640 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['interfaces']} on 4 hosts
+2019-12-02 18:26:06,865 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['interfaces']} on 4 hosts
+2019-12-02 18:29:58,147 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['interfaces']} on 4 hosts
+2019-12-02 18:30:31,731 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['interfaces']} on 4 hosts
+2019-12-02 18:31:01,760 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['interfaces']} on 4 hosts
+2019-12-02 18:38:07,768 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['interfaces']} on 4 hosts
+2019-12-02 18:38:28,055 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['interfaces']} on 4 hosts
+2019-12-02 18:38:54,012 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['interfaces']} on 4 hosts
+2019-12-02 18:41:52,416 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['interfaces']} on 4 hosts
+2019-12-02 18:42:10,858 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['interfaces']} on 4 hosts
+2019-12-02 18:44:58,371 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['interfaces']} on 4 hosts
+2019-12-02 18:46:10,606 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['interfaces']} on 4 hosts
+2019-12-02 18:46:25,740 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['interfaces']} on 4 hosts
+2019-12-02 18:47:01,878 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['interfaces']} on 4 hosts
+2019-12-02 18:47:23,483 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['interfaces']} on 4 hosts
+2019-12-02 18:51:45,108 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['interfaces']} on 4 hosts
+2019-12-02 18:52:51,512 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['interfaces']} on 4 hosts
+2019-12-02 18:56:00,144 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['interfaces']} on 4 hosts
+2019-12-02 18:56:18,069 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['interfaces']} on 4 hosts
+2019-12-02 18:59:13,882 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['interfaces']} on 4 hosts
+2019-12-02 19:03:41,753 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['interfaces']} on 4 hosts
+2019-12-02 19:04:44,781 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['interfaces']} on 4 hosts
+2019-12-02 19:13:15,114 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['interfaces']} on 4 hosts
+2019-12-02 19:13:53,888 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['interfaces']} on 4 hosts
+2019-12-02 19:24:04,594 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['interfaces']} on 4 hosts

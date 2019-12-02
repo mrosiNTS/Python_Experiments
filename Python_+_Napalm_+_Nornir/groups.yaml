@@ -1,0 +1,8 @@
+---
+cisco_ios:
+  connection_options:
+    napalm:
+      extras:
+        optional_args:
+          secret: cisco
+  platform: ios

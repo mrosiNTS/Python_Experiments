@@ -1,0 +1,17 @@
+---
+Router1:
+  groups:
+  - cisco_ios
+  hostname: 172.25.81.210
+Router2:
+  groups:
+  - cisco_ios
+  hostname: 172.25.81.203
+Router3:
+  groups:
+  - cisco_ios
+  hostname: 172.25.81.205
+Router4:
+  groups:
+  - cisco_ios
+  hostname: 172.25.81.208

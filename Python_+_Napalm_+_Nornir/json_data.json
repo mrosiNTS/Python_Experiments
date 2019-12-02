@@ -1,0 +1,70 @@
+{
+  "Router1": [
+    {
+      "Local_Interface": "GigabitEthernet0/3",
+      "Remote_Router": "ROUTER4",
+      "Remote_Interface": "Gi0/3"
+    },
+    {
+      "Local_Interface": "GigabitEthernet0/2",
+      "Remote_Router": "ROUTER3",
+      "Remote_Interface": "Gi0/1"
+    },
+    {
+      "Local_Interface": "GigabitEthernet0/1",
+      "Remote_Router": "ROUTER2",
+      "Remote_Interface": "Gi0/1"
+    }
+  ],
+  "Router2": [
+    {
+      "Local_Interface": "GigabitEthernet0/2",
+      "Remote_Router": "ROUTER4",
+      "Remote_Interface": "Gi0/1"
+    },
+    {
+      "Local_Interface": "GigabitEthernet0/3",
+      "Remote_Router": "ROUTER3",
+      "Remote_Interface": "Gi0/3"
+    },
+    {
+      "Local_Interface": "GigabitEthernet0/1",
+      "Remote_Router": "ROUTER1",
+      "Remote_Interface": "Gi0/1"
+    }
+  ],
+  "Router3": [
+    {
+      "Local_Interface": "GigabitEthernet0/2",
+      "Remote_Router": "ROUTER4",
+      "Remote_Interface": "Gi0/2"
+    },
+    {
+      "Local_Interface": "GigabitEthernet0/1",
+      "Remote_Router": "ROUTER1",
+      "Remote_Interface": "Gi0/2"
+    },
+    {
+      "Local_Interface": "GigabitEthernet0/3",
+      "Remote_Router": "ROUTER2",
+      "Remote_Interface": "Gi0/3"
+    }
+  ],
+  "Router4": [
+    {
+      "Local_Interface": "GigabitEthernet0/3",
+      "Remote_Router": "ROUTER1",
+      "Remote_Interface": "Gi0/3"
+    },
+    {
+      "Local_Interface": "GigabitEthernet0/1",
+      "Remote_Router": "ROUTER2",
+      "Remote_Interface": "Gi0/2"
+    },
+    {
+      "Local_Interface": "GigabitEthernet0/2",
+      "Remote_Router": "ROUTER3",
+      "Remote_Interface": "Gi0/2"
+    }
+  ]
+}
