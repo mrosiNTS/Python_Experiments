@@ -2,7 +2,6 @@
 
 from netmiko import ConnectHandler
 from time import perf_counter
-import threading
 import sys
 from netaddr import *
 from functions import read_file
